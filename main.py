@@ -4,60 +4,58 @@
 
 # Leitura de Tokens
 
-tokenList = {"Palavra Reservada": 
-                {"INT":"int", "FLOAT":"float",
-                "CHAR":"char", "BOOLEAN":"boolean",
-                "VOID":"void", "IF":"if",
-                "ELSE":"else", "FOR":"for",
-                "WHILE":"while", "SCANF":"scanf",
-                "PRINTLN":"println", "MAIN":"main",
-                "RETURN":"return"},
+from tokensInfo import tokenList
 
-                "Constantes de Texto": 
-                {"TEXTO":'"'},
-
-                "Operador aritmetico": 
-                {"+":"+", "-":"-", "*":"*", "/":"/", "%":"%"},
-                
-                "Simbolo especial": 
-                {"{":"{", "}":"}", "(":"(", ")":")", 
-                ";": ";", "[":"[", "]":"]", ",":",", "()": "()"},
-
-                "Operador logico":
-                {"&&": "&&", "||" : "||", "!":"!"}}
-
-def defineToken(lexemaList):
+def defineToken(lexemaList, line):
 
     lex = "".join(lexemaList)
 
     for classtoken in tokenList.values():
         if lex in classtoken.values():
-            print("Há o token:" + lex)
+            registerTokens("tokens.txt", lex, line)
             break
 
     lexemaList.clear()
 
-def findToken(arquivo):
-    simboList = []
-    
+def findTokenType(token):
+    for tokenCategory, tokenInfo in tokenList.items():
+         if token in tokenInfo.values():
+             return tokenCategory
+
+def registerTokens(arq, token, line):
+    saveArq = open(arq, "a")
+    tokenType = findTokenType(token)
+    tokenTypeMessage = f"- Tipo {tokenType}"
+    saveArq.write(f"Linha {line} : {token} {tokenTypeMessage:^50}\n")
+
+
+def reading(arquivo):
     lexema = []
 
+    lineCount = 0
+
     for line in arquivo:
+        lineCount += 1
         for character in line:
             if character in [' ', '\n']:
-                defineToken(lexema)
+                defineToken(lexema, lineCount)
 
             else:
                 if character in tokenList["Simbolo especial"]:
-                    if len(lexema) > 1:
-                        defineToken(lexema)
+                    defineToken(lexema, lineCount)
                     lexema.extend(character)
+                    defineToken(lexema, lineCount)
 
                 else:
                     lexema.extend(character)
 
 # Leitura de simbolos
 
-arquivo = open("codigo.txt", "r")
-findToken(arquivo)
-arquivo.close()
+def fileOpenToRead():
+    try:
+        with open("codigo.txt", 'r') as file:
+            reading(file)
+    except IOError:
+        print("Arquivo não existe")
+
+fileOpenToRead()
