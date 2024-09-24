@@ -4,9 +4,7 @@
 
 # Leitura de Tokens
 
-def findToken(arquivo):
-        
-    tokenList = {"Palavra Reservada": 
+tokenList = {"Palavra Reservada": 
                 {"INT":"int", "FLOAT":"float",
                 "CHAR":"char", "BOOLEAN":"boolean",
                 "VOID":"void", "IF":"if",
@@ -23,10 +21,23 @@ def findToken(arquivo):
                 
                 "Simbolo especial": 
                 {"{":"{", "}":"}", "(":"(", ")":")", 
-                ";": ";", "[":"[", "]":"]", ",":","},
+                ";": ";", "[":"[", "]":"]", ",":",", "()": "()"},
 
                 "Operador logico":
                 {"&&": "&&", "||" : "||", "!":"!"}}
+
+def defineToken(lexemaList):
+
+    lex = "".join(lexemaList)
+
+    for classtoken in tokenList.values():
+        if lex in classtoken.values():
+            print("Há o token:" + lex)
+            break
+
+    lexemaList.clear()
+
+def findToken(arquivo):
     simboList = []
     
     lexema = []
@@ -34,16 +45,16 @@ def findToken(arquivo):
     for line in arquivo:
         for character in line:
             if character in [' ', '\n']:
-                lex = "".join(lexema)
-                lexema.clear()
-                
-                for classtoken in tokenList.values():
-                    if lex in classtoken.values():
-                        print("Há token:" + lex)
+                defineToken(lexema)
+
             else:
                 if character in tokenList["Simbolo especial"]:
-                    pass
-                lexema.extend(character)
+                    if len(lexema) > 1:
+                        defineToken(lexema)
+                    lexema.extend(character)
+
+                else:
+                    lexema.extend(character)
 
 # Leitura de simbolos
 
