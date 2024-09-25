@@ -10,4 +10,4 @@ Linha 3 : ;              - Tipo Simbolo especial
 Linha 3 : ;              - Tipo Simbolo especial              
 Linha 3 : )              - Tipo Simbolo especial              
 Linha 3 : {              - Tipo Simbolo especial              
-Analisador Lexico:incapaz de encontrar ;
+FATAL |-> Analisador Lexico: incapaz de encontrar ';'.
