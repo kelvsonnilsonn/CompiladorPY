@@ -1,7 +1,6 @@
 from TokenHandler.defineToken import defineToken
-from TokenHandler.validateTokens import checkPair, checkSemiColon
 from CompilerUtils.FileUtils.commentsFinder import commentsFinder
-from TokenHandler.tokensInfo import tokenList
+
 
 
 def reading(arquivo):
@@ -10,6 +9,8 @@ def reading(arquivo):
 
     lexema = ""
     state = "inicial"
+
+    lineCount = 0
 
     for line in arquivo:
         lineCount += 1
@@ -24,8 +25,10 @@ def reading(arquivo):
                     elif character.isdigit():
                         state = "NUMBER"
                         lexema += character
-                    elif character in tokenList["Operador Aritmetico"]:
-                        defineToken(lexema, lineCount)
+                    else:
+                        lexema += character
+                        defineToken(lexema, line)
+                        lexema = ""
                 else:
                     match state:
                         case "IDENTIFIER":
@@ -33,3 +36,6 @@ def reading(arquivo):
                                 lexema += character
                             else:
                                 defineToken(lexema, lineCount)
+                                lexema = ""
+                                lexema += character
+                                state = "inicial"
