@@ -1,7 +1,7 @@
 from CompilerErrors.Errors import lexicalErros
 from TokenHandler.tokensInfo import tokenList
 
-def registerOnFile(arq, token, line, errorMessage = 0):
+def registerOnTokenFile(arq, token, line, errorMessage = 0):
     saveArq = open(arq, 'a')
     
     if errorMessage != 0:

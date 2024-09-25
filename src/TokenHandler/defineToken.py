@@ -1,12 +1,10 @@
 from TokenHandler.tokensInfo import tokenList
-from CompilerUtils.FileUtils.registerOnFileFunction import registerOnFile
+from CompilerUtils.FileUtils.registerOnFileFunction import registerOnTokenFile
 
-def defineToken(lexemaList, line):
-    lex = "".join(lexemaList)
-
+def defineToken(lexema, line):
     for classtoken in tokenList.values():
-        if lex in classtoken.values():
-            registerOnFile('Tests/tokens.txt', lex, line)
+        if lexema in classtoken.values():
+            registerOnTokenFile('Tests/tokens.txt', lexema, line)
             break
-
-    lexemaList.clear()
+    
+    

@@ -5,29 +5,31 @@ from TokenHandler.tokensInfo import tokenList
 
 
 def reading(arquivo):
-    lexema = []
+    
+    token = []
 
-    lineCount = breaknum = 0
+    lexema = ""
+    state = "inicial"
 
     for line in arquivo:
         lineCount += 1
         if commentsFinder(line.strip()):
             continue
         else:
-            for character in line.strip():
-                if character in [' ', '\n', '\t']:
-                    defineToken(lexema, lineCount)
-
+            for character in line.strip(): # Automato
+                if state == "inicial":
+                    if character.isalpha():
+                        state = "IDENTIFIER"
+                        lexema += character
+                    elif character.isdigit():
+                        state = "NUMBER"
+                        lexema += character
+                    elif character in tokenList["Operador Aritmetico"]:
+                        defineToken(lexema, lineCount)
                 else:
-                    if character in tokenList["Simbolo especial"]:
-                        checkPair(character)
-                        defineToken(lexema, lineCount)
-                        lexema.extend(character)
-                        defineToken(lexema, lineCount)
-
-                    else:
-                        lexema.extend(character)
-            breaknum = checkSemiColon("tokens.txt", line, lineCount)
-            
-            if breaknum == 1:
-                break
+                    match state:
+                        case "IDENTIFIER":
+                            if character.isalnum():
+                                lexema += character
+                            else:
+                                defineToken(lexema, lineCount)

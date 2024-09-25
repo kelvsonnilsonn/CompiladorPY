@@ -34,5 +34,8 @@ tokenList = {"Palavra Reservada":
                 "Operador logico":
                 {
                     "&&": "&&", "||" : "||", "!":"!"
-                }
+                },
+
+                "Operador de Atribuição":
+                {"=": "="}
             }
