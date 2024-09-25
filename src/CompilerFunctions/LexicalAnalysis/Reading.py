@@ -14,5 +14,5 @@ def reading(arquivo):
         elif line.startswith('\n'):
             continue
         else:
-            for character in line.strip(): # Automato
-                checkState(character, lineCount)
+            checkState(line, lineCount)
+            
