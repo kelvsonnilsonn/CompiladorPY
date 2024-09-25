@@ -1,4 +1,4 @@
-from main import registerOnFile
+from CompilerUtils.FileUtils.registerOnFileFunction import registerOnFile
 
 def checkPair(char):
     simboList = []
@@ -14,3 +14,4 @@ def checkSemiColon(arq, stringLine, lineCounter):
             registerOnFile(arq, 'a', lineCounter, 1)
             return 1
     return 0
+
