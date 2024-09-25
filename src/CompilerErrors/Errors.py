@@ -1,9 +1,9 @@
 def lexicalErrosTokens(errorNumber, lineCounter):
     match errorNumber:
         case 1:
-            print(f"não foi encontrado o ; na linha {lineCounter}")
+            return "incapaz de encontrar ';'."
 
 def lexicalErrosLexems(errorNumber, lineCounter):
     match errorNumber:
         case 1:
-            print(f"não foi encontrado o ; na linha {lineCounter}")
+            pass
