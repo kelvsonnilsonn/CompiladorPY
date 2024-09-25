@@ -1,5 +1,6 @@
 from CompilerErrors.Errors import lexicalErrosTokens, lexicalErrosLexems
 from CompilerUtils.FileUtils.FindTokenType import findTokenType
+from CompilerUtils.Utils.Tokens_Simbols_Info import operatorsList
 
 def registerOnTokenFile(arq, token, line, errorMessage = 0):
     saveArq = open(arq, 'a')
@@ -23,9 +24,9 @@ def registerOnSimbolsFile(arq, lexem, line, errorMessage = 0):
         return 0
 
     else:
+        for operators in operatorsList.values():
+            if lexem in operators:
+                saveArq.write(f"{operators.key()} {lexem}\n")
+                return
         saveArq.write(f"IDENTIFIER {lexem}\n")
-
-
         
-        lexem = ""
-

@@ -1,2 +1,0 @@
-Linha 1 : int              - Tipo Palavra Reservada             
-Linha 3 : for              - Tipo Palavra Reservada             
