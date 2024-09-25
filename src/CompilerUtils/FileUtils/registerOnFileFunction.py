@@ -5,8 +5,8 @@ def registerOnTokenFile(arq, token, line, errorMessage = 0):
     saveArq = open(arq, 'a')
     
     if errorMessage != 0:
-        lexicalErrosTokens(errorMessage, line)
-        saveArq.write(f"Erro de Analise Lexica na linha {line} pela falta de ;")
+        errorType = lexicalErrosTokens(errorMessage, line)
+        saveArq.write(f"FATAL |-> Analisador Lexico: " + errorType)
         return 0
 
     else:
@@ -18,8 +18,8 @@ def registerOnSimbolsFile(arq, lexem, line, errorMessage = 0):
     saveArq = open(arq, 'a')
     
     if errorMessage != 0:
-        lexicalErrosLexems(errorMessage, line)
-        saveArq.write(f"Erro de Analise Lexica na linha {line} pela falta de ;")
+        errorType = lexicalErrosTokens(errorMessage, line)
+        saveArq.write(f"FATAL |-> Analisador Lexico: " + errorType)
         return 0
 
     else:
