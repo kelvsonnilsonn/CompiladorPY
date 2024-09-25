@@ -1,9 +1,3 @@
-# Leitura de inteiros
-# Leitura de decimais
-# Leitura de Texto
-
-# Leitura de Tokens
-
 from CompilerFunctions.LexicalAnalysis.Reading import reading
 
 def fileOpenToRead():

@@ -1,11 +1,6 @@
 from CompilerUtils.FileUtils.registerOnFileFunction import registerOnFile
 
 def checkPair(char):
-    simboList = []
-    simboList.extend(char)
-    
-    pairs = ["()", "[]", "{}", "\"\""]
-    
     pass
 
 def checkSemiColon(arq, stringLine, lineCounter):

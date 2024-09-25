@@ -14,20 +14,20 @@ def reading(arquivo):
         if commentsFinder(line.strip()):
             continue
         else:
-            for character in line.strip():
-                if character in [' ', '\n', '\t']:
-                    defineToken(lexema, lineCount)
-
-                else:
-                    if character in tokenList["Simbolo especial"]:
-                        checkPair(character)
-                        defineToken(lexema, lineCount)
-                        lexema.extend(character)
+            if checkSemiColon("Tests/tokens.txt", line, lineCount):
+                break
+            
+            else:
+                for character in line.strip():
+                    if character in [' ', '\n', '\t']:
                         defineToken(lexema, lineCount)
 
                     else:
-                        lexema.extend(character)
-            breaknum = checkSemiColon("tokens.txt", line, lineCount)
-            
-            if breaknum == 1:
-                break
+                        if character in tokenList["Simbolo especial"]:
+                            checkPair(character)
+                            defineToken(lexema, lineCount)
+                            lexema.extend(character)
+                            defineToken(lexema, lineCount)
+
+                        else:
+                            lexema.extend(character)

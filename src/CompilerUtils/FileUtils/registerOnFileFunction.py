@@ -5,8 +5,8 @@ def registerOnFile(arq, token, line, errorMessage = 0):
     saveArq = open(arq, 'a')
     
     if errorMessage != 0:
-        lexicalErros(errorMessage, line)
-        saveArq.write(f"Erro de Analise Lexica na linha {line} pela falta de ;")
+        errorType = lexicalErros(errorMessage, line)
+        saveArq.write(f"FATAL |-> Analisador Lexico: " + errorType)
         return 0
 
     else:

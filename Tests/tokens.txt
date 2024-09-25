@@ -10,8 +10,4 @@ Linha 3 : ;              - Tipo Simbolo especial
 Linha 3 : ;              - Tipo Simbolo especial              
 Linha 3 : )              - Tipo Simbolo especial              
 Linha 3 : {              - Tipo Simbolo especial              
-Linha 4 : (              - Tipo Simbolo especial              
-Linha 4 : )              - Tipo Simbolo especial              
-Linha 4 : ;              - Tipo Simbolo especial              
-Linha 5 : }              - Tipo Simbolo especial              
-Linha 6 : }              - Tipo Simbolo especial              
+Analisador Lexico:incapaz de encontrar ;
