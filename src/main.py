@@ -1,3 +1,7 @@
 from CompilerUtils.FileUtils.registerOnFileFunction import fileAccess
+from CompilerUtils.Utils.dataToAnalysis import *
 
-fileAccess("Tests/codigo.txt", "Tests/tokens.txt", "Tests/Tabela_de_simbolos.txt")
+fileAccess_instance = fileAccess(code_base_to_analysis, output_to_tokens, output_to_simbols)
+fileAccess_instance.fileOpenToReadAndEdit()
+
+print("Analise Lexica finalizada.")
