@@ -1,4 +1,4 @@
-from TokenHandler.tokensInfo import tokenList
+from TokenHandler.tokensAndOperatorsInfo import tokenList
 from CompilerUtils.FileUtils.registerOnFileFunction import registerOnFile
 
 def defineToken(lexemaList, line):

@@ -1,13 +1,13 @@
 from TokenHandler.defineToken import defineToken
 from TokenHandler.validateTokens import checkPair, checkSemiColon
 from CompilerUtils.FileUtils.commentsFinder import commentsFinder
-from TokenHandler.tokensInfo import tokenList
+from TokenHandler.tokensAndOperatorsInfo import tokenList
 
 
 def reading(arquivo):
     lexema = []
 
-    lineCount = breaknum = 0
+    lineCount = 0
 
     for line in arquivo:
         lineCount += 1
