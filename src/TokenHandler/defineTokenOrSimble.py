@@ -1,10 +1,11 @@
-from CompilerUtils.Utils.Tokens_Simbols_Info import tokenList
-from CompilerUtils.FileUtils.registerOnFileFunction import registerOnTokenFile, registerOnSimbolsFile
+from CompilerUtils.Utils.Tokens_Simbols_Info import tokenList, operatorsList
+from CompilerUtils.FileUtils.registerOnFileFunction import registerOnFile
 
 def defineTokenOrSimble(lexema, line):
-    for classtoken in tokenList.values():
-        if lexema in classtoken.values():
-            registerOnTokenFile('Tests/tokens.txt', lexema, line)
-            return 0
+    for categoryTokens, valueTokens in tokenList.items():
+        if lexema in valueTokens.values():
+            registerOnFile.registerOnTokenFile(categoryTokens ,lexema, line)
     
-    registerOnSimbolsFile('Tests/Tabela_de_simbolos.txt', lexema, line)
+    for categorySimbles, valueSimbles in operatorsList.items():
+        if lexema in valueSimbles.vales():
+            registerOnFile.registerOnSimbolsFile(categorySimbles, lexema, line)

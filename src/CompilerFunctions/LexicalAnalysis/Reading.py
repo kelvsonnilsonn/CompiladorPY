@@ -1,8 +1,6 @@
 from CompilerUtils.FileUtils.commentsFinder import commentsFinder
 from CompilerUtils.Utils.CheckState import checkState
 
-
-
 def reading(file):
 
     lineCount = 0
