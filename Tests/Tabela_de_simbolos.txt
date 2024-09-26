@@ -1,5 +1,14 @@
+line :->: 3 :->: IDENTIFICADOR :->: i
 line :->: 3 :->: ATRIBUTION_OPERATOR :->: =
+line :->: 3 :->: IDENTIFICADOR :->: 
 line :->: 3 :->: COMP :->: <
+line :->: 3 :->: IDENTIFICADOR :->: i
+line :->: 3 :->: IDENTIFICADOR :->: 
 line :->: 3 :->: ARITHMETIC_OPERATOR :->: +
+line :->: 3 :->: IDENTIFICADOR :->: i
 line :->: 3 :->: ARITHMETIC_OPERATOR :->: +
+line :->: 4 :->: IDENTIFICADOR :->: printf
+line :->: 4 :->: IDENTIFICADOR :->: 
+line :->: 4 :->: IDENTIFICADOR :->: Hello
 line :->: 4 :->: LOGIC_OPERATOR :->: !
+line :->: 4 :->: IDENTIFICADOR :->: world

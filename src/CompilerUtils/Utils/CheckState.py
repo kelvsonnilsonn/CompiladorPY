@@ -12,8 +12,10 @@ def checkState(line, lineCount):
                 defineTokenOrSimble(char, lineCount)
                 break
         if char in tokenList["Simbolos especiais"].values():
-            print(char)
+            if lexema:
+                defineTokenOrSimble(lexema, lineCount)
             defineTokenOrSimble(char, lineCount)
+            lexema = ""
         else: 
             if state == "inicial":
                 if char.isalpha():
