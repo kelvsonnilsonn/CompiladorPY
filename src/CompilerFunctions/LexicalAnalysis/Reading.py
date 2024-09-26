@@ -3,11 +3,11 @@ from CompilerUtils.Utils.CheckState import checkState
 
 
 
-def reading(arquivo):
+def reading(file):
 
     lineCount = 0
 
-    for line in arquivo:
+    for line in file:
         lineCount += 1
         if commentsFinder(line.strip()):
             continue

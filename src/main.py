@@ -1,10 +1,4 @@
 from CompilerFunctions.LexicalAnalysis.Reading import reading
+from CompilerUtils.FileUtils.fileOpenToReadAndEditFunction import fileAcess
 
-def fileOpenToRead():
-    try:
-        with open('Tests/codigo.txt', 'r') as file:
-            reading(file)
-    except IOError:
-        print("Arquivo não existe")
-
-fileOpenToRead()
+fileOpenToReadAndEdit("Tests/codigo.txt", "Tests/tokens.txt", "Tests/Tabela_de_simbolos.txt")
