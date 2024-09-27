@@ -1,8 +1,11 @@
 int main(){
-    for(int i = 0; i<10; i++){
-        printf("Isso é um literal!");
+    for(int i=0;i<100;i++){
+        printf("Hello world");
     }
-    if(i == 100){
-        printf("Chegou no milhao!");
+    x = 10;
+    if(x == 100){
+        printf("Chegou a 100!");
+    } else{
+        printf("Brincadeira")
     }
 }

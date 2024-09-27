@@ -26,8 +26,9 @@ class fileAccess:
         with open(self.output_to_tokens, 'a') as saveArqToken:
 
             if errorMessage != 0:
-                saveArqToken.write(f"{lexicalErrosTokens(errorMessage, line)}")
-                return 0
+                saveArqToken.write(f"{lexicalErrosTokens(errorMessage)}")
+                print(f"{lexicalErrosTokens(errorMessage)}")
+                exit()
 
             if category == "NUMBER":
                 saveArqToken.write(f"NUM({token})\n")

@@ -1,9 +1,9 @@
-def lexicalErrosTokens(errorNumber, lineCounter):
+def lexicalErrosTokens(errorNumber):
     match errorNumber:
         case 1:
-            return "FATAL |-> Analisador Lexico: incapaz de encontrar ';'."
+            return "FATAL |-> Analisador Lexico: incapaz de encontrar ';'.\n"
 
-def lexicalErrosLexems(errorNumber, lineCounter):
+def lexicalErrosLexems(errorNumber):
     match errorNumber:
         case 1:
-            return "FATAL |-> Analisador Lexico: incapaz de encontrar \"."
+            return "FATAL |-> Analisador Lexico: incapaz de encontrar \".\n"

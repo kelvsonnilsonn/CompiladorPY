@@ -26,7 +26,7 @@ operatorsList = {
 
             "ARITHMETIC_OPERATOR": 
             {
-                "+":"+", "-":"-", "*":"*", "/":"/", "%":"%"
+                "+":"+", "-":"-", "*":"*", "/":"/", "%":"%",
             },
 
             "LOGIC_OPERATOR":
@@ -37,6 +37,16 @@ operatorsList = {
             "ATRIBUTION_OPERATOR":
             {
                 "=": "="
+            },
+            
+            "INCREMENT_OPERATOR":
+            {
+                "++": "++"
+            },
+            
+            "DECREMENT_OPERATOR":
+            {
+                "--": "--"
             },
             
             "COMP":
