@@ -3,14 +3,47 @@ Palavra Reservada -> main
 Simbolos especiais -> (
 Simbolos especiais -> )
 Simbolos especiais -> {
-Palavra Reservada -> int
-Palavra Reservada -> main
+Palavra Reservada -> for
 Simbolos especiais -> (
+Palavra Reservada -> int
+ID(1)
+ATRIBUTION_OPERATOR -> =
+NUM(0)
+Simbolos especiais -> ;
+ID(1)
+COMP -> <
+NUM(100)
+Simbolos especiais -> ;
+ID(1)
+INCREMENT_OPERATOR -> ++
 Simbolos especiais -> )
 Simbolos especiais -> {
-ARITHMETIC_OPERATOR -> /
-ARITHMETIC_OPERATOR -> /
-ID(1)
 ID(2)
+Simbolos especiais -> (
+LITERAL("Hello world")
+Simbolos especiais -> )
+Simbolos especiais -> ;
+Simbolos especiais -> }
 ID(3)
+ATRIBUTION_OPERATOR -> =
+NUM(10)
+Simbolos especiais -> ;
+Palavra Reservada -> if
+Simbolos especiais -> (
+ID(3)
+COMP -> ==
+NUM(100)
+Simbolos especiais -> )
+Simbolos especiais -> {
+ID(2)
+Simbolos especiais -> (
+LITERAL("Chegou a 100!")
+Simbolos especiais -> )
+Simbolos especiais -> ;
+Simbolos especiais -> }
+Palavra Reservada -> else
+Simbolos especiais -> {
+ID(2)
+Simbolos especiais -> (
+LITERAL("Brincadeira")
 FATAL |-> Analisador Lexico: incapaz de encontrar ';'.

@@ -7,6 +7,6 @@ int main(){ // tem um comentário aqui
     if(x == 100){
         printf("Chegou a 100!");
     } else{
-        printf("Brincadeira")
+        printf("Brincadeira");
     }
 }

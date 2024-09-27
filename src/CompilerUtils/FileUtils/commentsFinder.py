@@ -9,7 +9,7 @@ def commentsFinder(stringLine, line):
             if index < len(stringLine) - 1:
                 if char == stringLine[index+1] and char == '/':
                     checkState(literalSemComentario, line)
-                    return
+                    return 1
                 
                 else:
                     literalSemComentario += char
