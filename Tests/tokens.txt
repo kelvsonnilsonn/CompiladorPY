@@ -1,0 +1,16 @@
+Palavra Reservada -> int
+Palavra Reservada -> main
+Simbolos especiais -> (
+Simbolos especiais -> )
+Simbolos especiais -> {
+Palavra Reservada -> int
+Palavra Reservada -> main
+Simbolos especiais -> (
+Simbolos especiais -> )
+Simbolos especiais -> {
+ARITHMETIC_OPERATOR -> /
+ARITHMETIC_OPERATOR -> /
+ID(1)
+ID(2)
+ID(3)
+FATAL |-> Analisador Lexico: incapaz de encontrar ';'.

@@ -1,5 +1,6 @@
-int main(){
+int main(){ // tem um comentário aqui
     for(int i=0;i<100;i++){
+        // aqui também 
         printf("Hello world");
     }
     x = 10;

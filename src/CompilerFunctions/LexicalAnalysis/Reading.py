@@ -7,7 +7,7 @@ def reading(file):
 
     for line in file:
         lineCount += 1
-        if commentsFinder(line.strip()):
+        if commentsFinder(line.strip(), lineCount):
             continue
         elif line.startswith('\n'):
             continue
