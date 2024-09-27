@@ -1,34 +1,27 @@
-1 Palavra Reservada int
-1 Palavra Reservada main
-1 Simbolos especiais (
-1 Simbolos especiais )
-1 Simbolos especiais {
-3 Palavra Reservada for
-3 Simbolos especiais (
-3 Palavra Reservada int
+Palavra Reservada -> int
+Palavra Reservada -> main
+Simbolos especiais -> (
+Simbolos especiais -> )
+Simbolos especiais -> {
+Palavra Reservada -> for
+Simbolos especiais -> (
+Palavra Reservada -> int
 ID(1)
+ATRIBUTION_OPERATOR -> =
+NUM(0)
+Simbolos especiais -> ;
+ID(1)
+COMP -> <
+NUM(10)
+Simbolos especiais -> ;
+ID(1)
+ARITHMETIC_OPERATOR -> +
+ARITHMETIC_OPERATOR -> +
+Simbolos especiais -> )
+Simbolos especiais -> {
 ID(2)
-3 NUM(0)
-3 Simbolos especiais ;
-ID(1)
-ID(4)
-ID(1)
-3 NUM(10)
-3 Simbolos especiais ;
-ID(1)
-ID(7)
-ID(1)
-ID(7)
-3 Simbolos especiais )
-3 Simbolos especiais {
-ID(10)
-4 Simbolos especiais (
-ID(1)
-ID(12)
-ID(13)
-ID(14)
-4 Simbolos especiais )
-4 Simbolos especiais ;
-5 Simbolos especiais }
-5 Simbolos especiais ,
-6 Simbolos especiais }
+Simbolos especiais -> (
+LITERAL("Isso é um literal!")
+Simbolos especiais -> )
+Simbolos especiais -> }
+Simbolos especiais -> }

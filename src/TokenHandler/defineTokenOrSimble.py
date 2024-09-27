@@ -17,8 +17,8 @@ def defineTokenOrSimble(lexema, line):
         
         for categorySimbles, valueSimbles in operatorsList.items():
             if lexema in valueSimbles.values():
-                registerOnFile_instance.registerOnSimbolsFile(categorySimbles ,lexema, line)
+                registerOnFile_instance.registerOnTokenFile(categorySimbles ,lexema, line)
                 return 0
             
-        registerOnFile_instance.registerOnSimbolsFile("IDENTIFICADOR", lexema, line)
+        registerOnFile_instance.registerOnSimbolsFile(lexema, line)
         return 0
