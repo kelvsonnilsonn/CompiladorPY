@@ -1,3 +1,7 @@
+class ErrorsConfer:
+    def __init__(self, line):
+        self.line = line
+        pass
 def lexicalErrosTokens(errorNumber):
     match errorNumber:
         case 1:

@@ -2,14 +2,14 @@ class fileAccess:
     def __init__(self, Code_Base, OutputTokensPars, OutputSimplesPars):
         self.code_base = Code_Base
         self.output_to_tokens = OutputTokensPars
-        self.output_to_simbles = OutputSimplesPars
+        self.output_to_simbols = OutputSimplesPars
 
     def fileOpenToReadAndEdit(self):
 
         from CompilerFunctions.LexicalAnalysis.Reading import reading
 
         try:
-            open(self.output_to_simbles, 'a').close()
+            open(self.output_to_simbols, 'a').close()
             open(self.output_to_tokens, 'a').close()
 
             with open(f"{self.code_base}", 'r') as file:
@@ -33,7 +33,7 @@ class fileAccess:
             if category == "NUMBER":
                 saveArqToken.write(f"NUM({token})\n")
             elif category == "ID":
-                with open(self.output_to_simbles, 'r+') as file_content:
+                with open(self.output_to_simbols, 'r+') as file_content:
                     if not file_content:
                         saveArqToken.write(f"ID({1})\n")
                     else:
@@ -49,7 +49,7 @@ class fileAccess:
 
 
     def registerOnSimbolsFile(self, lexem, line, errorMessage=0):
-        with open(self.output_to_simbles, 'r+') as saveArq:
+        with open(self.output_to_simbols, 'r+') as saveArq:
             file_content = saveArq.readlines()
             if not file_content:
                 line = 1
