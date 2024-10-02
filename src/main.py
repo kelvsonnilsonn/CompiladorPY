@@ -5,3 +5,5 @@ fileAccess_instance = fileAccess(code_base_to_analysis, output_to_tokens, output
 fileAccess_instance.fileOpenToReadAndEdit()
 
 print("Analise Lexica finalizada.")
+
+# teste
